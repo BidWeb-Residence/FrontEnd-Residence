@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Home.css";
+import "./home.css";
 
 const Home: React.FC = () => {
   const [url, setUrl] = useState("");
