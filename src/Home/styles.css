@@ -29,53 +29,18 @@ body,
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
-.home-wrapper {
+.contain {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--bg);
   position: relative;
 }
 
-/* Header Styling */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #3164af 0%, #1d5177 100%);
-  color: white;
-  z-index: 100;
-  box-shadow: 0 4px 20px rgba(49, 100, 175, 0.15);
-}
-
-.site-header .container {
-  width: var(--container-w);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.brand {
-  margin: 0;
-  font-size: 1.4rem;
-  color: white;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-/* Main Content */
 .site-main {
   width: 100%;
   flex: 1;
@@ -86,7 +51,6 @@ body,
   margin-top: 60px;
 }
 
-/* Card Styling */
 .center-card {
   width: 100%;
   max-width: var(--max-card-w);
@@ -133,7 +97,6 @@ body,
   margin: 16px auto 0;
 }
 
-/* Input Row */
 .input-row {
   display: flex;
   gap: var(--gap);
@@ -143,7 +106,6 @@ body,
   flex-wrap: nowrap;
 }
 
-/* URL Input */
 .url-input {
   flex: 1 1 480px;
   min-width: 220px;
@@ -174,7 +136,6 @@ body,
   background: white;
 }
 
-/* Check Button */
 .check-button {
   background: linear-gradient(135deg, #3164af, #5a8dd9);
   color: #fff;
@@ -216,7 +177,6 @@ body,
   transform: translateY(0);
 }
 
-/* Hint Text */
 .hint {
   margin-top: 16px;
   color: var(--text-light);
@@ -224,32 +184,6 @@ body,
   line-height: 1.5;
 }
 
-/* Footer Styling */
-.site-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #3164af 0%, #1d5177 100%);
-  color: white;
-  z-index: 100;
-  box-shadow: 0 -4px 20px rgba(49, 100, 175, 0.15);
-  font-size: 0.9rem;
-}
-
-.site-footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 24px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .brand {
     font-size: 1.2rem;
