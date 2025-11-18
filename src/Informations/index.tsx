@@ -4,10 +4,10 @@ import "./styles.css";
 export default function Informations() {
   return (
     <div className="contain">
-      <section className="introductionSQLInjection">
+      <section className="content-section">
         <h1 className="title">O que é SQL Injection?</h1>
         <div className="content">
-          <p>
+          <p className="paragraph-into">
             O SQL Injection ou Injeção de SQL é um tipo de ataque antigo, porém,
             ainda muito comum e perigoso.O SQLi é uma maneira de interferir
             consultas SQL que sua aplicação envia para o banco de dados.
@@ -16,19 +16,19 @@ export default function Informations() {
           </p>
           <div className="illustrationBox">
             <img src={questionImagefrom} className="image" />
-            <a href="https://storyset.com/people">
+            <a href="https://storyset.com/people" target="_blank">
               People illustrations by Storyset
             </a>
           </div>
         </div>
       </section>
-      <section className="introductionSQLInjection">
+      <section className="content-section">
         <h1 className="title">Tipos de Injeções SQL</h1>
         <p>
           Existem diversos tipos de ataques SQL Injection, cada um com suas
           características e metodos específicos:
         </p>
-        <ul>
+        <ul className="atacks-list">
           <li>
             <strong>Injeção de SQL Cega ou Blind SQL Injection:</strong>Não há
             retorno direto de dados. O atacante infere informações por meio de
@@ -61,18 +61,18 @@ export default function Informations() {
           </li>
         </ul>
       </section>
-      <section className="introductionSQLInjection">
+      <section className="content-section">
         <h1 className="title">Como evitar um ataque de Injeção SQL?</h1>
-        <div className="content">
-          <h2>Validação de input</h2>
+        <div className="content-avoid-atacks">
+          <h2 className="sub-title">Validação de input</h2>
           <p>
             Implemente validações de todos os inputs que o usuário pode
             fornecer, você pode utilizar bibliotecas ou frameworks para ajudar
             nessa validação
           </p>
         </div>
-        <div className="content">
-          <h2>Implementação de privilégios</h2>
+        <div className="content-avoid-atacks">
+          <h2 className="sub-title">Implementação de privilégios</h2>
           <p>
             Evite conceder permissoes de administrador ou acesso irrestrito.
           </p>
