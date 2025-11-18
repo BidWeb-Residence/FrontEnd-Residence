@@ -1,0 +1,45 @@
+:root {
+  --bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+html,
+body {
+  height: auto !important;
+  overflow-y: auto !important;
+  margin: 0;
+  padding: 0;
+}
+.contain {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  position: relative;
+  color: #000;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+}
+
+.introductionSQLInjection {
+  background-color: #c7c7c780;
+
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.introductionSQLInjection .content {
+  display: flex;
+}
+
+.illustrationBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+}
