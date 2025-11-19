@@ -1,8 +1,17 @@
 import { useState } from "react";
 import "./styles.css";
+import fetchSqlMap from "../services/fetchSqlMap";
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [dataAPI, setDataAPI] = useState();
+
+  async function VerifyVunerabily(data: String) {
+    const resultData = await fetchSqlMap(data);
+    console.log(resultData)
+    setDataAPI(resultData);
+    console.log(dataAPI)
+  }
 
   return (
     <div className="contain">
@@ -22,7 +31,7 @@ export default function Home() {
             <button
               className="check-button"
               type="button"
-              onClick={() => alert(url)}
+              onClick={() => VerifyVunerabily(url)}
             >
               Verificar
             </button>
