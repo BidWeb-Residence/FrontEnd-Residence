@@ -1,16 +1,16 @@
 import { useState } from "react";
-import "./styles.css";
 import fetchSqlMap from "../services/fetchSqlMap";
+import "./styles.css";
 
 export default function Home() {
   const [url, setUrl] = useState("");
   const [dataAPI, setDataAPI] = useState();
 
-  async function VerifyVunerabily(data: String) {
-    const resultData = await fetchSqlMap(data);
-    console.log(resultData)
+  async function VerifyVunerabily(data: string) {
+    const resultData = await fetchSqlMap({ url: data });
+    console.log(resultData);
     setDataAPI(resultData);
-    console.log(dataAPI)
+    console.log(dataAPI);
   }
 
   return (
