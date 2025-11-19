@@ -4,7 +4,7 @@ import "./styles.css";
 export default function Informations() {
   return (
     <div className="contain">
-      <section className="content-section">
+      <section className="content-into-sql">
         <h1 className="title">O que é SQL Injection?</h1>
         <div className="content">
           <p className="paragraph-into">
@@ -14,12 +14,12 @@ export default function Informations() {
             Resumindo, SQLi é uma tentativa de "enganar" o banco de dados, no
             intuito de, revelar dados que não deveria.
           </p>
-          <div className="illustrationBox">
+          {/* <div className="illustrationBox">
             <img src={questionImagefrom} className="image" />
             <a href="https://storyset.com/people" target="_blank">
               People illustrations by Storyset
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
       <section className="content-section">
