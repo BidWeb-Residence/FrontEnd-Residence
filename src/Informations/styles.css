@@ -90,6 +90,7 @@ body {
 
 .list-paragraph {
   background-color: white;
+  font-family: var(font-family);
 
   border-left: 5px solid #2a399b;
   border-radius: 8px;

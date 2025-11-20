@@ -45,6 +45,7 @@ body,
   width: 100%;
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 60px 20px 80px;
@@ -54,11 +55,8 @@ body,
 .center-card {
   width: 100%;
   max-width: var(--max-card-w);
-  background: rgba(255, 255, 255, 0.98);
   border-radius: var(--card-radius);
   padding: 48px;
-  box-shadow: 0 20px 60px rgba(49, 100, 175, 0.12), 0 0 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.8);
   text-align: center;
   backdrop-filter: blur(10px);
   animation: slideUp 0.6s ease-out;
@@ -75,26 +73,25 @@ body,
   }
 }
 
+.title-div {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
 .card-title {
   margin: 0 0 24px 0;
-  color: var(--text);
+  color: #3164af;
   font-size: 1.6rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #3164af, #1d5177);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.5px;
 }
 
-.card-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #3164af, #5a8dd9);
-  border-radius: 2px;
-  margin: 16px auto 0;
+.card-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .input-row {
@@ -137,7 +134,7 @@ body,
 }
 
 .check-button {
-  background: linear-gradient(135deg, #3164af, #5a8dd9);
+  background: #5a8dd9;
   color: #fff;
   border: none;
   padding: 14px 32px;
@@ -151,6 +148,10 @@ body,
   position: relative;
   overflow: hidden;
   font-family: inherit;
+}
+
+.loading-check-button {
+  background-color: rgb(45, 50, 56);
 }
 
 .check-button::before {
@@ -182,6 +183,53 @@ body,
   color: var(--text-light);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.result-vunerabily {
+  background-color: #f5f5f5;
+
+  border-radius: 8px;
+
+  width: 80%;
+  padding: 16px 32px;
+
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.result-vunerabily::-webkit-scrollbar {
+  height: 5px;
+}
+
+.result-vunerabily::-webkit-scrollbar-track {
+  background: #4646468a;
+}
+
+.result-vunerabily::-webkit-scrollbar-thumb {
+  background: #3164af;
+  border-radius: 6px;
+}
+
+.contain-display-result {
+  width: 100%;
+}
+
+.title-result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.db-result {
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-family: var();
+  border-radius: 0.5rem;
+  border-left: 0.3rem solid #2a399b;
+}
+
+.paragraph-api-data {
 }
 
 @media (max-width: 768px) {
