@@ -28,19 +28,15 @@ body {
   padding: 32px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; 
 }
 .title-intro {
-    font-size: 32px;
-    text-align: center; 
-    width: 100%;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 .content-sections-info {
   background-color: #f2f3f6ed;
   width: 60%;
-  margin-bottom: 120px; 
+  margin-bottom: 120px;
 }
 .content-section {
   border-radius: 16px;
@@ -48,7 +44,7 @@ body {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 .content-section .content {
   display: flex;
@@ -56,7 +52,7 @@ body {
 }
 .title {
   font-size: 28px;
-  margin-top: 0; 
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .image {
@@ -65,8 +61,6 @@ body {
 }
 .paragraph-into {
   width: 70%;
-  text-align: center; 
-  margin: 0 auto;
 }
 .illustrationBox {
   display: flex;
@@ -75,42 +69,42 @@ body {
 .atacks-list {
   list-style: none;
   display: flex;
-  flex-direction: column; 
-  gap: 20px; 
+  flex-direction: column;
+  gap: 20px;
   padding: 0;
   margin-top: 0;
 }
 .list-paragraph {
   background-color: white;
   font-family: var(font-family);
-  
-  border-left: none; 
+
+  border-left: none;
   border-radius: 8px;
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
   padding: 15px 20px;
 
-  display: flex; 
+  display: flex;
   align-items: flex-start;
   gap: 15px;
 }
 .list-icon-container {
-    padding-top: 4px;
+  padding-top: 4px;
 }
 .list-paragraph strong {
-    display: block; 
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 .content-avoid-atacks {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 .content-avoid-atacks .sub-title {
   margin-top: 0;
   margin-bottom: 5px;
 }
 .content-avoid-atacks p {
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
