@@ -87,14 +87,23 @@ export default function Home() {
               <h1 className="title-result">URL verificada:</h1>
               <p className="paragraph-api-data">{dataAPI.target_url}</p>
 
-              <h1 className="title-result">Vulnerabilidades:</h1>
-              <p className="paragraph-api-data">{dataAPI.output}</p>
-
               <h1 className="title-result">Banco de dados detectados:</h1>
-              {dataAPI.detected_databases.map((dbName, index) => (
-                <p key={index} className="db-result">
+              {dataAPI.data.databases.map((dbName, index) => (
+                <p key={`${index}-db`} className="db-result">
                   {dbName}
                 </p>
+              ))}
+
+              <h1 className="title-result">Vulnerabilidades:</h1>
+
+              {dataAPI.data.injection_points.map((vunerabily, index) => (
+                <div key={`${index}-vunerabily`}>
+                  <p key={`${index}-vunerabily-title`}>{vunerabily.title}</p>
+                  <p key={`${index}-vunerabily-type`}>{vunerabily.type}</p>
+                  <p key={`${index}-vunerabily-payload`}>
+                    {vunerabily.payload}
+                  </p>
+                </div>
               ))}
             </div>
           )}
