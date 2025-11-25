@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header className="site-header">
-      <h1 className="brand">Projeto de Verificação</h1>
+      <h1 className="brand">SafeX</h1>
 
       <nav className="navbar">
         <Link

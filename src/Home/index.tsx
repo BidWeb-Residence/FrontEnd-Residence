@@ -10,6 +10,10 @@ export default function Home() {
   const [dataAPI, setDataAPI] = useState<ApiDataType>();
 
   async function VerifyVunerabily(data: string) {
+    if(data === "" || data.replace(/\s/g, "") === ""){
+      alert("Por favor inserir os dados corretamente!")
+      return;
+    }
     setDataAPI(undefined);
     setIsLoading(true);
     const resultData = await fetchSqlMap({ url: data });
@@ -85,17 +89,31 @@ export default function Home() {
           ) : (
             <div className="contain-display-result">
               <h1 className="title-result">URL verificada:</h1>
-              <p className="paragraph-api-data">{dataAPI.target_url}</p>
-
-              <h1 className="title-result">Vulnerabilidades:</h1>
-              <p className="paragraph-api-data">{dataAPI.output}</p>
+              <p>{dataAPI.target_url}</p>
 
               <h1 className="title-result">Banco de dados detectados:</h1>
-              {dataAPI.detected_databases.map((dbName, index) => (
-                <p key={index} className="db-result">
+              {dataAPI.data.databases.map((dbName, index) => (
+                <p key={`${index}-db`} className="db-target-result">
                   {dbName}
                 </p>
               ))}
+
+              <h1 className="title-result">Vulnerabilidades:</h1>
+
+              {dataAPI.data.injection_points.map((vunerabily, index) => (
+                <div key={`${index}-vunerabily`} className="div-result">
+                  <p key={`${index}-vunerabily-title`} className="paragraph-result"><strong>Título:</strong> {vunerabily.title}</p>
+                  <p key={`${index}-vunerabily-type`} className="paragraph-result"><strong>Tipo de vunerablidade:</strong> {vunerabily.type}</p>
+                  <p key={`${index}-vunerabily-payload`} className="paragraph-result">
+                    <strong>Query SQL:</strong> {vunerabily.payload}
+                  </p>
+                </div>
+              ))}
+
+              <h1 className="title-result">Informações extras</h1>
+
+              <p className="db-target-result "><strong>Sistema operacional:</strong> {dataAPI.data.target.os}</p>
+              <p className="db-target-result "><strong>Tecnologias:</strong> {dataAPI.data.target.technology}</p>
             </div>
           )}
         </section>
